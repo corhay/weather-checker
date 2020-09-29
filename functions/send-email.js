@@ -1,12 +1,16 @@
 const nodemailer = require('nodemailer');
+console.log("ok hello yes alright");
 
-var mailOptions = {
-    from: 'corwin.hayslip@gmail.com',
-    to: 'corwinhayslip@yahoo.com',
-    subject: 'yes so common',
-    text: 'ouais zarma'
-};
 exports.handler = function(event, context, callback) {
+    var mailOptions = {
+        from: 'corwin.hayslip@gmail.com',
+        to: 'corwinhayslip@yahoo.com',
+        subject: 'yes so common',
+        text: 'ouais zarma'
+    };
+
+    console.log("mailOptions and stuff with env variable:" + process.env.CORPASS)
+
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
