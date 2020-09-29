@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 
 var mailOptions = {
-    from: 'thewysalami@gmail.com',
+    from: 'corwin.hayslip@gmail.com',
     to: 'corwinhayslip@yahoo.com',
     subject: 'yes so common',
     text: 'ouais zarma'
@@ -10,8 +10,8 @@ exports.handler = function(event, context, callback) {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'thewysalami@gmail.com',
-            pass: process.env.SALAMIPASS
+            user: 'corwin.hayslip@gmail.com',
+            pass: process.env.CORPASS
         }
     });
 
